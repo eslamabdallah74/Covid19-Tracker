@@ -21,12 +21,14 @@ import DataTitle from '@/components/DataTitle'
 import DataBoxes from '@/components/DataBoxes'
 import CountrySelect from '@/components/CountrySelect'
 
+
+
 export default {
       name: 'Content',
       components:{
         DataTitle,
         DataBoxes,
-        CountrySelect
+        CountrySelect,
       },
       data() {
         return {
@@ -35,7 +37,11 @@ export default {
           dataDate: '',
           stats: {},
           countries: [],
-          loadingImage: require('../assets/loading.gif')
+          loadingImage: require('../assets/loading.gif'),
+          ChartOptions: {
+            responsive: true,
+            maintainAspectRation: false
+          }
         }
       },
       methods: {
